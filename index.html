@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimension Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="bg">
+        <video autoplay muted loop playsinline>
+            <source src="assets/blackhole.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <div id="wrapper">
+
+        <header id="header">
+            <div class="logo">
+                <i class="fa-solid fa-atom"></i>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>S. Mattías</h1>
+                    <p>Student</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#cv">CV / Resume</a></li>
+                    <li><a href="#assign1">Assign. 1</a></li>
+                    <li><a href="#assign2">Assign. 2</a></li>
+                    <li><a href="#assign3">Assign. 3</a></li>
+                    <li><a href="#final">Final</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="main">
+
+            <article id="intro">
+                <h2 class="major">Introduction</h2>
+                <p><strong>Welcome to my portfolio.</strong> This website captures my journey through this course, VÉL608G, and other projects.</p>
+                <p><strong>Goals:</strong> I am excited to learn everything this course has to offer. I am especially excited to learn 3D printing.</p>
+                <span class="close" onclick="closeArticle()">Close</span>
+            </article>
+
+            <article id="cv">
+                <h2 class="major">CV</h2>
+                
+                <div class="cv-item">
+                    <h3>Samaso - Founder</h3>
+                    <span class="date">2025 - Present</span>
+                    <p>I mainly run the operations of the company and get clients.</p>
+                </div>
+                <hr>
+                
+                <div class="cv-item">
+                    <h3>Krónan - Shift Manager</h3>
+                    <span class="date">2022 - Present</span>
+                    <p>I make sure the store looks very clean and orderly before closing the store.</p>
+                </div>
+                <hr>
+
+                <div class="cv-item">
+                    <h3>University of Iceland / Mechancial Engineering</h3>
+                    <span class="date">2023 - present</span>
+                    <p>I am studying BS Mechanical Engineering.</p>
+                </div>
+
+                <span class="close" onclick="closeArticle()">Close</span>
+            </article>
+
+            <article id="assign1">
+                <h2 class="major">Assignment 1</h2>
+                <h3>Documentation</h3>
+                <p><strong>Inspiration:</strong> I chose the html template "Dimension" from https://html5up.net/ as an inspiration for my portfolio website, as it looked very clean and nice. I wanted to use a black hole that I had created a long time ago as the background as a starter for this portfolio. The black hole takes a bit to load in, however in my opinion it is quite nice to have in the background.</p>
+                <p><strong>Process:</strong> I started off looking for inspiration on html5up and I found Dimension which looked quite unique and clean to me. I used it as inspiration as I built my portfolio using HTML5 and CSS3, utilizing Flexbox for the layout to ensure everything stays centered. I got the help of Gemini to help me with some aspects such as the buttons and inserting the video in the background. I had to look up for tutorials on how to upload this website on github.</p>
+                <p><strong>Thoughts:</strong> Overall I didn't think this project was all too dificult as I have made a website before for my startup, but overall this was a nice experience.</p>
+                <span class="close" onclick="closeArticle()">Close</span>
+            </article>
+
+            <article id="assign2">
+                <h2 class="major">Assignment 2</h2>
+                <p>Coming Soon...</p>
+                <span class="close" onclick="closeArticle()">Close</span>
+            </article>
+
+            <article id="assign3">
+                <h2 class="major">Assignment 3</h2>
+                <p>Coming Soon...</p>
+                <span class="close" onclick="closeArticle()">Close</span>
+            </article>
+
+            <article id="final">
+                <h2 class="major">Final Project</h2>
+                <p>Coming Soon...</p>
+                <span class="close" onclick="closeArticle()">Close</span>
+            </article>
+
+        </div>
+
+        <footer id="footer">
+            <p>&copy; Your Name. Design: Adapted from HTML5 UP.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const header = document.getElementById('header');
+        const footer = document.getElementById('footer');
+        const main = document.getElementById('main');
+        const articles = document.querySelectorAll('article');
+
+        // Listen for link clicks
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                
+                // Hide Header
+                header.style.display = 'none';
+                footer.style.display = 'none';
+
+                // Show Main Container
+                main.style.display = 'flex';
+
+                // Show Specific Article
+                articles.forEach(art => art.style.display = 'none');
+                document.getElementById(targetId).style.display = 'block';
+                
+                // Small timeout for fade-in effect
+                setTimeout(() => {
+                    document.getElementById(targetId).classList.add('active');
+                }, 10);
+            });
+        });
+
+        // Close function
+        function closeArticle() {
+            // Hide Articles
+            articles.forEach(art => {
+                art.classList.remove('active');
+                art.style.display = 'none';
+            });
+            main.style.display = 'none';
+
+            // Show Header
+            header.style.display = 'flex';
+            footer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

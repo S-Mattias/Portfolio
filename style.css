@@ -1,0 +1,198 @@
+/* RESET & FONTS */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, html { height: 100%; width: 100%; }
+
+body {
+    background: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents scrolling on main page */
+}
+
+/* BACKGROUND VIDEO */
+#bg {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
+}
+#bg video {
+    width: 100%; height: 100%; object-fit: cover;
+}
+#bg .overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4); /* Darkens video */
+    background-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="%23000" opacity=".2"/></svg>'); /* Scanline effect */
+}
+
+/* WRAPPER */
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* HEADER (The Main Box) */
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 3rem 2rem;
+    position: relative;
+    background: rgba(18, 18, 18, 0.6);
+    backdrop-filter: blur(5px);
+    width: 400px;
+    max-width: 90%;
+}
+
+/* The Diamond Logo */
+.logo {
+    width: 5.5rem; height: 5.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 100%; /* Makes it a circle. Change to 0 for square */
+    line-height: 5.5rem;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#header .content {
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    margin: 2rem 0;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+#header h1 {
+    font-weight: 700; letter-spacing: 0.2rem; text-transform: uppercase; margin-bottom: 0.5rem; font-size: 1.5rem;
+}
+#header p {
+    text-transform: uppercase; letter-spacing: 0.1rem; font-size: 0.8rem; opacity: 0.8;
+}
+
+/* NAVIGATION LINKS */
+nav ul {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    list-style: none; gap: 10px; padding: 0;
+}
+nav a {
+    display: block;
+    min-width: 5rem;
+    height: 3rem;
+    line-height: 3rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    padding: 0 10px;
+}
+nav a:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: #fff;
+}
+
+/* ARTICLES (The Popups) */
+#main {
+    display: none; /* Hidden by default */
+    width: 100%; height: 100%;
+    align-items: center; justify-content: center;
+    padding: 20px;
+}
+
+article {
+    display: none; /* Individual articles hidden */
+    width: 100%; max-width: 700px;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 3rem;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    max-height: 80vh;
+    overflow-y: auto; /* Scroll if text is long */
+}
+
+article.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2.major {
+    border-bottom: 1px solid #fff;
+    width: max-content;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* CV Items */
+.cv-item { margin-bottom: 1.5rem; }
+.cv-item h3 { margin-bottom: 0.2rem; }
+.date { font-size: 0.8rem; color: #a0c4ff; display: block; margin-bottom: 0.5rem; }
+hr { border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 1.5rem 0; }
+
+/* CLOSE BUTTON */
+.close {
+    position: absolute;
+    top: 1rem; right: 1rem;
+    width: 3rem; height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    transition: 0.2s;
+    border: 1px solid transparent;
+}
+.close:hover {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* FOOTER */
+#footer {
+    position: fixed; bottom: 1rem; left: 0; width: 100%;
+    text-align: center; color: rgba(255,255,255,0.3); font-size: 0.7rem;
+}
+/* --- TEXT SPACING FIXES --- */
+
+/* This adds space between paragraphs */
+p {
+    margin-bottom: 2rem; /* This pushes the next paragraph down */
+    line-height: 1.8;    /* This makes the lines of text breathe more */
+    font-size: 1.1rem;   /* Makes text slightly larger and easier to read */
+}
+
+/* This adds space between headers and the text below them */
+h1, h2, h3 {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem; /* Adds a futuristic space between letters */
+}
+
+/* Specific fix for the lists inside the CV or assignments */
+ul {
+    margin-bottom: 2rem;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
