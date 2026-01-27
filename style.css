@@ -192,6 +192,27 @@ ul {
     margin-bottom: 2rem;
     padding-left: 20px;
 }
+/* --- CUSTOM SCROLLBAR --- */
+/* Width of the scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track (the background of the bar) - make it transparent */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle (the part that moves) - semi-transparent white */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 4px;
+}
+
+/* Handle on hover - make it brighter */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.4); 
+}
 
 li {
     margin-bottom: 10px; /* Space between list items */

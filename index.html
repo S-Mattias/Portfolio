@@ -78,10 +78,52 @@
 
             <article id="assign1">
                 <h2 class="major">Assignment 1</h2>
-                <h3>Documentation</h3>
-                <p><strong>Inspiration:</strong> I chose the html template "Dimension" from https://html5up.net/ as an inspiration for my portfolio website, as it looked very clean and nice. I wanted to use a black hole that I had created a long time ago as the background as a starter for this portfolio. The black hole takes a bit to load in, however in my opinion it is quite nice to have in the background.</p>
-                <p><strong>Process:</strong> I started off looking for inspiration on html5up and I found Dimension which looked quite unique and clean to me. I used it as inspiration as I built my portfolio using HTML5 and CSS3, utilizing Flexbox for the layout to ensure everything stays centered. I got the help of Gemini to help me with some aspects such as the buttons and inserting the video in the background. I had to look up for tutorials on how to upload this website on github.</p>
-                <p><strong>Thoughts:</strong> Overall I didn't think this project was all too dificult as I have made a website before for my startup, but overall this was a nice experience.</p>
+                
+                <h3>1. Inspiration</h3>
+                <p>
+                    I selected the "Dimension" aesthetic from <strong>html5up.net</strong> as my primary inspiration. 
+                    I was drawn to its "Single Page Application" feel, which keeps everything clean and contained. 
+                    However, I decided not to use their code directly, but rather to recreate the layout myself to better understand CSS Flexbox. 
+                    I wanted to personalize it by using a <strong>Black Hole video loop</strong> that I created myself as the background, 
+                    giving the portfolio a unique sci-fi atmosphere compared to standard static images.
+                </p>
+
+                <h3>2. Process & Technical Implementation</h3>
+                <p>
+                    <strong>Coding:</strong> I built the site using HTML5 and CSS3. I utilized <strong>CSS Flexbox</strong> to center the content cards. 
+                    I used AI (Gemini) to help explain how to position the text overlays so they wouldn't cover the center of the black hole.
+                </p>
+                <p>
+                    <strong>Media Processing:</strong> The original black hole video file was very large. 
+                    To ensure the website loads reasonably fast, I converted the file to <strong>MP4 format</strong> and compressed it. 
+                    I also used a CSS overlay to darken the video slightly so the white text remains readable.
+                </p>
+
+                <div style="margin-bottom: 2rem;">
+                    <span class="date">Figure 1: HTML Video Implementation</span>
+                    <img src="assets/code-screenshot.jpg" alt="Screenshot of HTML Code" style="width: 100%; border: 1px solid #555; border-radius: 5px;">
+                </div>
+
+                <h3>3. Github Deployment</h3>
+                <p>
+                    To host the website, I used the <strong>Git Bash</strong> command line interface. 
+                    I initialized the repository locally using <code>git init</code>, staged my files, and committed them. 
+                    Finally, I pushed the code to the <code>main</code> branch on Github.
+                </p>
+
+                <div style="margin-bottom: 2rem;">
+                    <span class="date">Figure 2: Uploading via Git Bash</span>
+                    <img src="assets/git-screenshot.jpg" alt="Screenshot of Git Process" style="width: 100%; border: 1px solid #555; border-radius: 5px;">
+                </div>
+
+                <h3>4. Thoughts</h3>
+                <p>
+                    While I have some experience with startups, building a portfolio from scratch using raw HTML/CSS was a valuable refresher. 
+                    The biggest challenge was balancing the high-quality video background with page load performance.
+                </p>
+
+                <p><strong>Github Repo:</strong> <a href="INSERT_YOUR_GITHUB_LINK_HERE" target="_blank">Click here to view source</a></p>
+                
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
@@ -106,7 +148,7 @@
         </div>
 
         <footer id="footer">
-            <p>&copy; Your Name. Design: Adapted from HTML5 UP.</p>
+            <p>&copy; S. Mattías. Design: Adapted from HTML5 UP.</p>
         </footer>
 
     </div>
