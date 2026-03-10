@@ -135,7 +135,7 @@
                 
                 <h3>1. Introduction and Concept</h3>
                 <p>
-                    The goal of this assignment was to explore computer-aided manufacturing through both vinyl cutting and laser cutting. I designed and manufactured <strong>[BRIEFLY DESCRIBE WHAT YOU MADE, e.g., a custom sticker for my laptop and a parametric press-fit phone stand]</strong>.
+                    The goal of this assignment was to explore computer-aided manufacturing through both vinyl cutting and laser cutting. I designed and manufactured the Samaso logo as a sticker to put on my laptop.
                 </p>
 
                 <h3>2. Vinyl Cutting</h3>
@@ -143,7 +143,7 @@
                     <strong>Process:</strong> I started by designing the vector graphic in <strong>[Inkscape / Illustrator]</strong>. The cutting area was kept within the 100x50cm limit. I exported the file to the vinyl cutter software, adjusted the blade settings, and cut out the design.
                 </p>
                 <p>
-                    <strong>Execution:</strong> After the cut, I removed the excess vinyl (weeding) and used transfer tape to apply the sticker smoothly onto <strong>[THE OBJECT YOU PUT IT ON, e.g., my notebook]</strong>.
+                    <strong>Execution:</strong> After the cut, I removed the excess vinyl (weeding) and used transfer tape to apply the sticker smoothly onto my laptop.
                 </p>
                 
                 <img src="assets/vinyl-sticker.jpg" alt="Vinyl Cut Sticker" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
@@ -151,7 +151,7 @@
 
                 <h3>3. Parametric Design and Press-Fit</h3>
                 <p>
-                    <strong>Fusion 360 Design:</strong> I used Autodesk Fusion 360 to create the 3D model. The requirement was to make the model fully parametric, meaning I set up user parameters such as <code>materialThickness</code>, <code>width</code>, and <code>height</code>. By changing these numbers, the entire model scales automatically without breaking.
+                    <strong>Fusion 360 Design:</strong> I used Autodesk Fusion 360 to create the 3D model. The requirement was to make the model fully parametric, meaning I set up user parameters such as 3mm, <code>width</code>, and <code>height</code>. By changing these numbers, the entire model scales automatically without breaking.
                 </p>
                 <p>
                     <strong>Assembly Features:</strong> The design incorporates <strong>[NUMBER]</strong> press-fit joints. I utilized <strong>[NAME THE JOINT TYPES, e.g., finger joints and slot joints]</strong> to ensure the pieces fit perfectly together without the need for glue.
@@ -162,10 +162,10 @@
 
                 <h3>4. Group Project: Kerf Testing</h3>
                 <p>
-                    In collaboration with my group members, <strong>[NAMES OF TEAMMATES]</strong>, we used the laser cutter to measure the "kerf" (the amount of material burned away by the laser beam).
+                    It was just me for this project, I used the laser cutter to measure the "kerf" (the amount of material burned away by the laser beam).
                 </p>
                 <p>
-                    <strong>Testing:</strong> We cut a test comb with slots of incrementally decreasing sizes to find the perfect friction fit for <strong>[NAME THE MATERIAL USED, e.g., 3mm acrylic / 6mm plywood]</strong>. Our conclusion was that the kerf for this specific machine and material was <strong>[INSERT KERF NUMBER, e.g., 0.15mm]</strong>. I then input this exact number as a parameter in my Fusion 360 model to compensate for the laser beam thickness.
+                    <strong>Testing:</strong> We cut a test comb with slots of incrementally decreasing sizes to find the perfect friction fit for 3mm acrylic. Our conclusion was that the kerf for this specific machine and material was 0,2mm. I then input this exact number as a parameter in my Fusion 360 model to compensate for the laser beam thickness.
                 </p>
                 
                 <img src="assets/kerf-test.jpg" alt="Kerf testing pieces" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
@@ -184,8 +184,8 @@
 
                 <h3>6. Challenges and Solutions</h3>
                 <ul>
-                    <li><strong>Challenge:</strong> <strong>[Describe a problem, e.g., Initially, when I changed the material thickness parameter, the slots overlapped and broke the sketch in Fusion 360.]</strong></li>
-                    <li><strong>Solution:</strong> <strong>[Describe how you solved it, e.g., I went back into the sketch constraints and ensured all lines were properly dimensioned relative to each other rather than fixed to the origin.]</strong></li>
+                    <li><strong>Challenge:</strong> 
+                    <li><strong>Solution:</strong> 
                 </ul>
 
                 <h3>7. References and Design Files</h3>
@@ -227,7 +227,7 @@
                     Before printing the final model, I had to determine the design rules and constraints of the printer (Prusa MK3+). I designed and printed a tolerance and overhang test piece that included different gaps between parts (ranging from 0.1mm to 0.5mm) and various overhang angles.
                 </p>
                 <p>
-                    <strong>Test Results:</strong> I discovered that the printer can successfully handle a <strong>[INSERT NUMBER, e.g., 0.2mm]</strong> gap without the parts fusing together, and it can print up to a <strong>[NUMBER, e.g., 55°]</strong> angle without needing support material. These test results directly influenced my final design; I went back into Fusion 360 and adjusted the clearances on my moving parts to exactly <strong>[NUMBER, e.g., 0.25mm]</strong> to ensure perfect functionality.
+                    <strong>Test Results:</strong> I discovered that the printer can successfully handle a gap without the parts fusing together, and it can print up to a angle without needing support material. These test results directly influenced my final design; I went back into Fusion 360 and adjusted the clearances on my moving parts to exactly to ensure perfect functionality.
                 </p>
                 
                 <img src="assets/3d-test.jpg" alt="3D Printing Tolerance Test" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
@@ -235,7 +235,7 @@
 
                 <h3>4. Final Product and Learning Outcome</h3>
                 <p>
-                    The final model was printed on a Prusa MK3+. The slicing software (PrusaSlicer) indicated that the object would use <strong>[NUMBER, e.g., 35g]</strong> of plastic, which is well under the 100g limit. The model printed successfully and functioned exactly as intended.
+                    The final model was printed on a Prusa MK3+. The slicing software (PrusaSlicer) indicated that the object would use of plastic, which is well under the 100g limit. The model printed successfully and functioned exactly as intended.
                 </p>
                 <p>
                     <strong>What I learned:</strong> I learned how crucial it is to understand the tolerances of each specific machine. My initial CAD sketch had clearances that were too tight and would have fused together if I hadn't conducted those basic tests first.
@@ -246,10 +246,10 @@
 
                 <h3>5. 3D Scanning and Analysis</h3>
                 <p>
-                    For the second part of the assignment, I performed a 3D scan of <strong>[OBJECT YOU SCANNED, e.g., a shoe / a coffee mug / a small sculpture]</strong> using the app <strong>[Qlone / 3DF Zephyr / Polycam]</strong>. 
+                    For the second part of the assignment, I performed a 3D scan of using the app . 
                 </p>
                 <p>
-                    <strong>Quality Analysis:</strong> The model turned out <strong>[decently / very well]</strong>, but there was quite a bit of "noise" (rough surfaces), and the software struggled to capture <strong>[explain the issue, e.g., the shiny surfaces / the dark black parts of the model]</strong>.
+                    <strong>Quality Analysis:</strong> The model turned out  but there was quite a bit of "noise" (rough surfaces), and the software struggled to capture.
                 </p>
                 <p>
                     <strong>Potential Improvements:</strong> To improve the quality of the scan, I could have ensured softer, diffused lighting to avoid harsh shadows, used a scanning spray (or dry shampoo) to remove the glare from the material, and taken more photos from additional angles in a more controlled environment.
