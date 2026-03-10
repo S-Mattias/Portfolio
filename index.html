@@ -46,7 +46,7 @@
             <article id="intro">
                 <h2 class="major">Introduction</h2>
                 <p><strong>Welcome to my portfolio.</strong> This website captures my journey through this course, VÉL608G, and other projects.</p>
-                <p><strong>About myself:</strong> I am a student at the University of Iceland studying mechanical engineering, and I am the founder of Samaso. I love all sorts of arts such as literature, movies, games, and traditional art.</p>
+                <p><strong>About myself:</strong>I am a student in the University of Iceland studying mechanical engineering and I am the founder of Samaso. I love all sorts of arts such as literature, movies, games, and traditional art.</p>
                 <p><strong>Goals:</strong> I am excited to learn everything this course has to offer. I am especially excited to learn 3D printing.</p>
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
@@ -85,70 +85,189 @@
             </article>
 
             <article id="assign1">
-                <h2 class="major">Assignment 1</h2>
+                <h2 class="major">Assignment 1: Process</h2>
                 
-                <h3>1. Inspiration</h3>
+                <h3>1. Design Premises and Inspiration</h3>
                 <p>
-                    I selected the "Dimension" aesthetic from <a href="https://html5up.net" target="_blank" style="color: #a0c4ff; text-decoration: none; border-bottom: 1px dotted #fff;">html5up.net</a> as my primary inspiration. 
-                    I was drawn to its "Single Page Application" feel, which keeps everything clean and contained. 
-                    However, I decided not to use their code directly, but rather to recreate the layout myself to better understand CSS Flexbox. 
-                    I wanted to personalize it by using a Black Hole video loop that I created myself as the background, 
-                    giving the portfolio a sci-fi atmosphere compared to standard static images.
+                    I started by looking at templates online and chose the <strong>"Dimension"</strong> template as inspiration because it is very sleek and isolates content in pop-up windows. I decided to make the website more engaging by using a <strong>black hole video</strong> I created a while ago as the background. The color palette (black, white, and gray) was chosen to fit the "Space/Sci-Fi" theme that the video gives off.
                 </p>
 
-                <h3>2. Process & Technical Implementation</h3>
+                <h3>2. Media Processing and Technical Implementation</h3>
                 <p>
-                    <strong>Coding:</strong> I built the site using HTML5 and CSS3. I utilized CSS Flexbox to center the content cards. 
-                    I used Gemini AI to help explain how to position the text overlays so they wouldn't cover the center of the black hole.
+                    <strong>Video Processing:</strong> The original black hole video was a large file. To ensure the website loads quickly without freezing, I had to use video editing software to compress the video and save it as an <code>.mp4</code> file. I then placed a dark, semi-transparent layer (CSS overlay) over the video to ensure the white text is always easily readable.
                 </p>
                 <p>
-                    <strong>Media Processing:</strong> The original black hole video file was very large. 
-                    To ensure the website loads reasonably fast, I converted the file to MP4 format and compressed it. 
-                    I also used a CSS overlay to darken the video slightly so the white text remains readable.
+                    <strong>Programming:</strong> I built the site using HTML5 and CSS3, and used <em>CSS Flexbox</em> to ensure the windows and menu are always centered, regardless of screen size.
                 </p>
-
-                <div style="margin-bottom: 2rem;">
-                    <span class="date">Figure 1: HTML Video Implementation</span>
-                    <img src="assets/code-screenshot.png" alt="Screenshot of HTML Code" style="width: 100%; border: 1px solid #555; border-radius: 5px;">
-                </div>
 
                 <h3>3. Github Deployment</h3>
                 <p>
-                    To host the website, I uploaded all my files to github by dragging my files from my folder to github. After uploading, I went into settings, then pages, and then from branch I put in main instead of none.
+                    To upload the site to the web, I used <strong>Git Bash</strong> (command line). I went through the following steps:
+                </p>
+                <ul>
+                    <li>Used <code>git init</code> to create a local repository.</li>
+                    <li>Used <code>git add .</code> and <code>git commit -m "Initial setup"</code> to save changes.</li>
+                    <li>Connected the folder to Github using <code>git remote add origin</code> and finally uploaded using <code>git push</code>.</li>
+                </ul>
+                <p>It was a slight challenge making sure all paths to the video and documents were correct so they worked after the site went live, but that was solved by having a well-organized <em>assets</em> folder.</p>
+
+                <p><em>Screenshot of the coding environment/Git setup:</em></p>
+                <img src="assets/code-screenshot.png" alt="Screenshot of code" style="width: 100%; border-radius: 5px; margin-bottom: 20px;">
+
+                <h3>4. Sources and Links</h3>
+                <p>The following tools and sources were used during the project:</p>
+                <ul>
+                    <li><strong>Template/Inspiration:</strong> <a href="https://html5up.net/" target="_blank">HTML5 UP (Dimension)</a></li>
+                    <li><strong>References and Documentation:</strong> I used <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> to find information about proper HTML/CSS tags and AI to help with CSS design (overlay over video).</li>
+                    <li><strong>Hosting:</strong> The project was deployed on <a href="https://github.com/" target="_blank">Github</a>.</li>
+                </ul>
+
+                <p style="text-align: center; margin-top: 2rem;">
+                    <strong><i class="fa-brands fa-github"></i> My Github Repository:</strong><br>
+                    <a href="PUT_YOUR_GITHUB_LINK_HERE" target="_blank" style="font-size: 1.2rem;">Click here to view the code</a>
                 </p>
 
-                <div style="margin-bottom: 2rem;">
-                    <span class="date">Figure 2: Uploading via Git Bash</span>
-                    <img src="assets/git-screenshot.png" alt="Screenshot of Git Process" style="width: 100%; border: 1px solid #555; border-radius: 5px;">
-                </div>
-
-                <h3>4. Thoughts</h3>
-                <p>
-                    While I have some experience with websites, building a portfolio from scratch using raw HTML/CSS was a valuable refresher. 
-                    The biggest challenge was balancing the high-quality video background with page load performance.
-                </p>
-
-                <p><strong>Github Repo:</strong> <a href="https://github.com/S-Mattias/Portfolio" target="_blank">Click here to view source</a></p>
-
-                <footer id="footer">
-                <p>
-                &copy; AJ. Dimension: Adapted from 
-                <a href="https://html5up.net" target="_blank">HTML5 UP</a>.
-                </p>
-                </footer>
-                
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
             <article id="assign2">
-                <h2 class="major">Assignment 2</h2>
-                <p>Coming Soon...</p>
+                <h2 class="major">Assignment 2: Computer-Aided Manufacturing</h2>
+                
+                <h3>1. Introduction and Concept</h3>
+                <p>
+                    The goal of this assignment was to explore computer-aided manufacturing through both vinyl cutting and laser cutting. I designed and manufactured <strong>[BRIEFLY DESCRIBE WHAT YOU MADE, e.g., a custom sticker for my laptop and a parametric press-fit phone stand]</strong>.
+                </p>
+
+                <h3>2. Vinyl Cutting</h3>
+                <p>
+                    <strong>Process:</strong> I started by designing the vector graphic in <strong>[Inkscape / Illustrator]</strong>. The cutting area was kept within the 100x50cm limit. I exported the file to the vinyl cutter software, adjusted the blade settings, and cut out the design.
+                </p>
+                <p>
+                    <strong>Execution:</strong> After the cut, I removed the excess vinyl (weeding) and used transfer tape to apply the sticker smoothly onto <strong>[THE OBJECT YOU PUT IT ON, e.g., my notebook]</strong>.
+                </p>
+                
+                <img src="assets/vinyl-sticker.jpg" alt="Vinyl Cut Sticker" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+                <span class="date">Figure 1: The final applied vinyl cut design.</span>
+
+                <h3>3. Parametric Design and Press-Fit</h3>
+                <p>
+                    <strong>Fusion 360 Design:</strong> I used Autodesk Fusion 360 to create the 3D model. The requirement was to make the model fully parametric, meaning I set up user parameters such as <code>materialThickness</code>, <code>width</code>, and <code>height</code>. By changing these numbers, the entire model scales automatically without breaking.
+                </p>
+                <p>
+                    <strong>Assembly Features:</strong> The design incorporates <strong>[NUMBER]</strong> press-fit joints. I utilized <strong>[NAME THE JOINT TYPES, e.g., finger joints and slot joints]</strong> to ensure the pieces fit perfectly together without the need for glue.
+                </p>
+                
+                <img src="assets/fusion360-parameters.jpg" alt="Parametric design in Fusion 360" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+                <span class="date">Figure 2: Screenshot from Fusion 360 showcasing the parameters and the 3D model.</span>
+
+                <h3>4. Group Project: Kerf Testing</h3>
+                <p>
+                    In collaboration with my group members, <strong>[NAMES OF TEAMMATES]</strong>, we used the laser cutter to measure the "kerf" (the amount of material burned away by the laser beam).
+                </p>
+                <p>
+                    <strong>Testing:</strong> We cut a test comb with slots of incrementally decreasing sizes to find the perfect friction fit for <strong>[NAME THE MATERIAL USED, e.g., 3mm acrylic / 6mm plywood]</strong>. Our conclusion was that the kerf for this specific machine and material was <strong>[INSERT KERF NUMBER, e.g., 0.15mm]</strong>. I then input this exact number as a parameter in my Fusion 360 model to compensate for the laser beam thickness.
+                </p>
+                
+                <img src="assets/kerf-test.jpg" alt="Kerf testing pieces" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+                <span class="date">Figure 3: Our group's kerf test used to determine the exact material tolerances.</span>
+
+                <h3>5. Cutting, Assembly, and Final Product</h3>
+                <p>
+                    I exported the flat faces of my design as DXF files from Fusion 360 and brought them into <strong>[Inkscape / Illustrator]</strong> to ensure all lines were formatted correctly for the laser cutter (e.g., setting line colors/weights for cutting vs. engraving). The model was then cut out using the laser cutter.
+                </p>
+                <p>
+                    The pieces were collected and assembled. Because of the kerf compensation, the press-fit joints worked flawlessly, resulting in a very sturdy final product.
+                </p>
+                
+                <img src="assets/final-laser-product.jpg" alt="Assembled press-fit model" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+                <span class="date">Figure 4: The fully assembled press-fit product.</span>
+
+                <h3>6. Challenges and Solutions</h3>
+                <ul>
+                    <li><strong>Challenge:</strong> <strong>[Describe a problem, e.g., Initially, when I changed the material thickness parameter, the slots overlapped and broke the sketch in Fusion 360.]</strong></li>
+                    <li><strong>Solution:</strong> <strong>[Describe how you solved it, e.g., I went back into the sketch constraints and ensured all lines were properly dimensioned relative to each other rather than fixed to the origin.]</strong></li>
+                </ul>
+
+                <h3>7. References and Design Files</h3>
+                <p>
+                    All original design files (Fusion 360 <code>.f3d</code> files and the exported <code>.dxf</code> cutting files) have been uploaded to my repository. While the model was drawn from scratch, I drew some inspiration for the joint mechanisms from examples online.
+                </p>
+                <ul>
+                    <li><strong>Inspiration:</strong> <a href="[INSERT_INSPIRATION_LINK_HERE]" target="_blank"><strong>[Name of the Thingiverse model or website]</strong></a></li>
+                    <li><strong>Design Files:</strong> <a href="[INSERT_YOUR_GITHUB_OR_DRIVE_LINK_HERE]" target="_blank" class="btn-download" style="margin-top: 10px; font-size: 0.7rem;"><i class="fa-solid fa-file-arrow-down"></i> Download CAD & DXF Files</a></li>
+                </ul>
+
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
             <article id="assign3">
-                <h2 class="major">Assignment 3</h2>
-                <p>Coming Soon...</p>
+                <h2 class="major">Assignment 3: 3D Printing and Scanning</h2>
+                
+                <h3>1. Ideation, Keywords, and Research</h3>
+                <p>
+                    The goal of this assignment was to design and print an object that specifically requires 3D printing (additive manufacturing) and to test the limits of the printer. To find inspiration and research the possibilities, I used the following search keywords on <strong>Google</strong> and <strong>YouTube</strong>: 
+                    <em>"Print in place mechanisms", "impossible shapes subtractive manufacturing", "3D printing tolerance test",</em> and <em>"Prusa MK3+ design constraints"</em>. 
+                    I learned a lot by studying how others have designed moving parts that print fully assembled.
+                </p>
+
+                <h3>2. The Design: Additive vs. Subtractive</h3>
+                <p>
+                    I designed <strong>a foot for the drone I am building for Tölvustýrður vélbúnaður</strong> using Autodesk Fusion 360. 
+                </p>
+                
+
+[Image of additive vs subtractive manufacturing]
+
+                <p>
+                    <strong>Why 3D printing?</strong> This design would be impossible to manufacture using subtractive methods, such as CNC milling. The reason is that the model contains <strong>[internal cavities / moving parts that print together / complex undercuts]</strong> where a milling tool could never reach to remove the material.
+                </p>
+
+                <h3>3. 3D Printer Testing and Design Rules</h3>
+                <p>
+                    Before printing the final model, I had to determine the design rules and constraints of the printer (Prusa MK3+). I designed and printed a tolerance and overhang test piece that included different gaps between parts (ranging from 0.1mm to 0.5mm) and various overhang angles.
+                </p>
+                <p>
+                    <strong>Test Results:</strong> I discovered that the printer can successfully handle a <strong>[INSERT NUMBER, e.g., 0.2mm]</strong> gap without the parts fusing together, and it can print up to a <strong>[NUMBER, e.g., 55°]</strong> angle without needing support material. These test results directly influenced my final design; I went back into Fusion 360 and adjusted the clearances on my moving parts to exactly <strong>[NUMBER, e.g., 0.25mm]</strong> to ensure perfect functionality.
+                </p>
+                
+                <img src="assets/3d-test.jpg" alt="3D Printing Tolerance Test" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+                <span class="date">Figure 1: Tolerance and overhang test prints.</span>
+
+                <h3>4. Final Product and Learning Outcome</h3>
+                <p>
+                    The final model was printed on a Prusa MK3+. The slicing software (PrusaSlicer) indicated that the object would use <strong>[NUMBER, e.g., 35g]</strong> of plastic, which is well under the 100g limit. The model printed successfully and functioned exactly as intended.
+                </p>
+                <p>
+                    <strong>What I learned:</strong> I learned how crucial it is to understand the tolerances of each specific machine. My initial CAD sketch had clearances that were too tight and would have fused together if I hadn't conducted those basic tests first.
+                </p>
+                
+                <img src="assets/3d-final.jpg" alt="Final 3D Printed Object" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+                <span class="date">Figure 2: The completed 3D printed model.</span>
+
+                <h3>5. 3D Scanning and Analysis</h3>
+                <p>
+                    For the second part of the assignment, I performed a 3D scan of <strong>[OBJECT YOU SCANNED, e.g., a shoe / a coffee mug / a small sculpture]</strong> using the app <strong>[Qlone / 3DF Zephyr / Polycam]</strong>. 
+                </p>
+                <p>
+                    <strong>Quality Analysis:</strong> The model turned out <strong>[decently / very well]</strong>, but there was quite a bit of "noise" (rough surfaces), and the software struggled to capture <strong>[explain the issue, e.g., the shiny surfaces / the dark black parts of the model]</strong>.
+                </p>
+                <p>
+                    <strong>Potential Improvements:</strong> To improve the quality of the scan, I could have ensured softer, diffused lighting to avoid harsh shadows, used a scanning spray (or dry shampoo) to remove the glare from the material, and taken more photos from additional angles in a more controlled environment.
+                </p>
+                
+                <img src="assets/3d-scan.jpg" alt="3D Scan Result" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
+                <span class="date">Figure 3: Results from the 3D scan and point-cloud analysis.</span>
+
+                <h3>6. References and Design Files</h3>
+                <p>
+                    Below are the links to the resources used for inspiration, as well as all CAD files (.f3d) and Slicer files (.stl / .gcode) generated during the project.
+                </p>
+                <ul>
+                    <li><strong>Ideation/Search Sources:</strong> <a href="[LINK_TO_YOUTUBE_OR_THINGIVERSE]" target="_blank"><strong>[Name of source here]</strong></a></li>
+                    <li><strong>Slicer Assistance:</strong> I relied on the course slides and the <a href="https://help.prusa3d.com/" target="_blank">Prusa Knowledge Base</a> for the base settings.</li>
+                    <li><strong>Downloadable Files:</strong> <a href="[YOUR_GITHUB_OR_GOOGLE_DRIVE_LINK]" target="_blank" class="btn-download" style="margin-top: 10px; font-size: 0.7rem;"><i class="fa-solid fa-file-arrow-down"></i> Download Files (.stl / .f3d)</a></li>
+                </ul>
+
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
@@ -211,6 +330,4 @@
         }
     </script>
 </body>
-
 </html>
-
