@@ -135,12 +135,12 @@
                 
                 <h3>1. Introduction and Concept</h3>
                 <p>
-                    The goal of this assignment was to explore computer-aided manufacturing through both vinyl cutting and laser cutting. I designed and manufactured the Samaso logo as a sticker to put on my laptop.
+                    The goal of this assignment was to explore computer-aided manufacturing through both vinyl cutting and laser cutting. I designed and manufactured the Samaso logo as a sticker to put on my laptop and designed a Samaso logo stand for my desk.
                 </p>
 
                 <h3>2. Vinyl Cutting</h3>
                 <p>
-                    <strong>Process:</strong> I started by designing the vector graphic in <strong>[Inkscape / Illustrator]</strong>. The cutting area was kept within the 100x50cm limit. I exported the file to the vinyl cutter software, adjusted the blade settings, and cut out the design.
+                    <strong>Process:</strong> I started by designing the vector graphic in Illustrator. The cutting area was kept within the 100x50cm limit. I exported the file to the vinyl cutter pc, then I adjusted the svg so that the computer could read it and cut it, I adjusted the blade settings, and cut out the design.
                 </p>
                 <p>
                     <strong>Execution:</strong> After the cut, I removed the excess vinyl (weeding) and used transfer tape to apply the sticker smoothly onto my laptop.
@@ -151,10 +151,10 @@
 
                 <h3>3. Parametric Design and Press-Fit</h3>
                 <p>
-                    <strong>Fusion 360 Design:</strong> I used Autodesk Fusion 360 to create the 3D model. The requirement was to make the model fully parametric, meaning I set up user parameters such as 3mm, <code>width</code>, and <code>height</code>. By changing these numbers, the entire model scales automatically without breaking.
+                    <strong>Fusion 360 Design:</strong> I used Autodesk Fusion 360 to create the 3D model. The requirement was to make the model fully parametric, meaning I set up user parameters such as 3mm vinyl, width, and height. By changing these numbers, the entire model scales automatically without breaking.
                 </p>
                 <p>
-                    <strong>Assembly Features:</strong> The design incorporates <strong>[NUMBER]</strong> press-fit joints. I utilized <strong>[NAME THE JOINT TYPES, e.g., finger joints and slot joints]</strong> to ensure the pieces fit perfectly together without the need for glue.
+                    <strong>Assembly Features:</strong> The design incorporates 11 press-fit joints. I made the little feets would fit togethere with the base to ensure the pieces fit perfectly together without the need for glue.
                 </p>
                 
                 <img src="assets/fusion360-parameters.jpg" alt="Parametric design in Fusion 360" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
@@ -165,18 +165,18 @@
                     It was just me for this project, I used the laser cutter to measure the "kerf" (the amount of material burned away by the laser beam).
                 </p>
                 <p>
-                    <strong>Testing:</strong> We cut a test comb with slots of incrementally decreasing sizes to find the perfect friction fit for 3mm acrylic. Our conclusion was that the kerf for this specific machine and material was 0,2mm. I then input this exact number as a parameter in my Fusion 360 model to compensate for the laser beam thickness.
+                    <strong>Testing:</strong> I made a small rectangle with 10 small pieces of ractangles inside it to evaluate after gently making them all closer to one side see the gap between the side where they all are and the inner edge of the big rectangle to find the perfect friction fit for 3mm acrylic. My conclusion was that the kerf for this specific machine and material was 0,2mm. I then input this exact number as a parameter in my Fusion 360 model to compensate for the laser beam thickness.
                 </p>
                 
                 <img src="assets/kerf-test.jpg" alt="Kerf testing pieces" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 3: Our group's kerf test used to determine the exact material tolerances.</span>
+                <span class="date">Figure 3: My kerf test used to determine the exact material tolerances.</span>
 
                 <h3>5. Cutting, Assembly, and Final Product</h3>
                 <p>
-                    I exported the flat faces of my design as DXF files from Fusion 360 and brought them into <strong>[Inkscape / Illustrator]</strong> to ensure all lines were formatted correctly for the laser cutter (e.g., setting line colors/weights for cutting vs. engraving). The model was then cut out using the laser cutter.
+                    I exported the flat faces of my design as DXF files from Fusion 360 and brought them into Inkscape to ensure all lines were formatted correctly for the laser cutter (e.g., setting line colors/weights for cutting vs. engraving). The model was then cut out using the laser cutter.
                 </p>
                 <p>
-                    The pieces were collected and assembled. Because of the kerf compensation, the press-fit joints worked flawlessly, resulting in a very sturdy final product.
+                    The pieces were collected and assembled. Because of the kerf compensation, the press-fit joints worked flawlessly except for the middle piece which is slightly a bit more loose due to the bent mirror in the laser, otherwise it resulted in a very sturdy final product.
                 </p>
                 
                 <img src="assets/final-laser-product.jpg" alt="Assembled press-fit model" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
@@ -190,7 +190,7 @@
 
                 <h3>7. References and Design Files</h3>
                 <p>
-                    All original design files (Fusion 360 <code>.f3d</code> files and the exported <code>.dxf</code> cutting files) have been uploaded to my repository. While the model was drawn from scratch, I drew some inspiration for the joint mechanisms from examples online.
+                    All original design files (Fusion 360 <code>.f3d</code> files and the exported <code>.dxf</code> cutting files) have been uploaded to my repository. The press fit joints were my idea but I had seen desk ornaments before a long time ago having legs to make the main object "float".
                 </p>
                 <ul>
                     <li><strong>Inspiration:</strong> <a href="[INSERT_INSPIRATION_LINK_HERE]" target="_blank"><strong>[Name of the Thingiverse model or website]</strong></a></li>
@@ -205,26 +205,25 @@
                 
                 <h3>1. Ideation, Keywords, and Research</h3>
                 <p>
-                    The goal of this assignment was to design and print an object that specifically requires 3D printing (additive manufacturing) and to test the limits of the printer. To find inspiration and research the possibilities, I used the following search keywords on <strong>Google</strong> and <strong>YouTube</strong>: 
-                    <em>"Print in place mechanisms", "impossible shapes subtractive manufacturing", "3D printing tolerance test",</em> and <em>"Prusa MK3+ design constraints"</em>. 
-                    I learned a lot by studying how others have designed moving parts that print fully assembled.
+                    The goal of this assignment was to design and print an object that specifically requires 3D printing (additive manufacturing) and to test the limits of the printer. It took me a while to think about what I was going to do until I finally got to the conclusion of wanting to make feet for my drone for another subject's final project. I first started off by coding it in OpenSCAD as I wanted to make it impossible to manufacture without 3D printing. But when using TPU you have to be careful as it does not work well with supports as it is a softer material. So I pivoted to a different design that I did in Fusion 360.
+                    I learned a lot through this process of trial and error.
                 </p>
 
                 <h3>2. The Design: Additive vs. Subtractive</h3>
                 <p>
-                    I designed <strong>a foot for the drone I am building for Tölvustýrður vélbúnaður</strong> using Autodesk Fusion 360. 
+                    I designed a foot for the drone I am building for Tölvustýrður vélbúnaður using first OpenSCAD and then Autodesk Fusion 360. 
                 </p>
                 
 
 [Image of additive vs subtractive manufacturing]
 
                 <p>
-                    <strong>Why 3D printing?</strong> This design would be impossible to manufacture using subtractive methods, such as CNC milling. The reason is that the model contains <strong>[internal cavities / moving parts that print together / complex undercuts]</strong> where a milling tool could never reach to remove the material.
+                    <strong>Why 3D printing?</strong> This design would be impossible to manufacture using subtractive methods, such as CNC milling. The reason is that the model contains very small and long gaps that CNC machines won't be able to get to without breaking the component.
                 </p>
 
                 <h3>3. 3D Printer Testing and Design Rules</h3>
                 <p>
-                    Before printing the final model, I had to determine the design rules and constraints of the printer (Prusa MK3+). I designed and printed a tolerance and overhang test piece that included different gaps between parts (ranging from 0.1mm to 0.5mm) and various overhang angles.
+                    Before printing the final model, I had to determine the design rules and constraints of the printer (Prusa MK4). I had printed the first model from OpenSCAD but those two models turned out quite horribly so I pivoted to a different strategy of making the model in Fusion 360 and a whole lot easier for the printer to print (aka without having any supports).
                 </p>
                 <p>
                     <strong>Test Results:</strong> I discovered that the printer can successfully handle a gap without the parts fusing together, and it can print up to a angle without needing support material. These test results directly influenced my final design; I went back into Fusion 360 and adjusted the clearances on my moving parts to exactly to ensure perfect functionality.
@@ -235,10 +234,10 @@
 
                 <h3>4. Final Product and Learning Outcome</h3>
                 <p>
-                    The final model was printed on a Prusa MK3+. The slicing software (PrusaSlicer) indicated that the object would use of plastic, which is well under the 100g limit. The model printed successfully and functioned exactly as intended.
+                    The final model was printed on a Prusa MK4. The slicing software (PrusaSlicer) indicated that the object would use of plastic, which is well under the 100g limit. The model printed fairly successfully and we shall see if it functioned exactly as intended as I have yet to recieve the body of my drone.
                 </p>
                 <p>
-                    <strong>What I learned:</strong> I learned how crucial it is to understand the tolerances of each specific machine. My initial CAD sketch had clearances that were too tight and would have fused together if I hadn't conducted those basic tests first.
+                    <strong>What I learned:</strong> I learned how quite different materials are for 3D printing and how flexible a 4-axis CNC machine can be. TPA works quite a lot differently compared to PLA, as the TPA recommends that you should not have supports while PLA is a whole lot easier to work with in terms of using supports. I learned that sometimes doing a simpler model is more efficient than an overly complex one.
                 </p>
                 
                 <img src="assets/3d-final.jpg" alt="Final 3D Printed Object" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
@@ -246,13 +245,17 @@
 
                 <h3>5. 3D Scanning and Analysis</h3>
                 <p>
-                    For the second part of the assignment, I performed a 3D scan of using the app . 
+                    For the second part of the assignment, I performed a 3D scan of a sculpture of Abraham Lincon's head using the app Kiri engine. 
                 </p>
                 <p>
-                    <strong>Quality Analysis:</strong> The model turned out  but there was quite a bit of "noise" (rough surfaces), and the software struggled to capture.
+                    <strong>First Try:</strong> The first model turned out quite well but there was quite a bit of "noise" (rough surfaces), and the lighting was a bit off so it didn't capture as much detail as I would have wanted.
                 </p>
                 <p>
-                    <strong>Potential Improvements:</strong> To improve the quality of the scan, I could have ensured softer, diffused lighting to avoid harsh shadows, used a scanning spray (or dry shampoo) to remove the glare from the material, and taken more photos from additional angles in a more controlled environment.
+                    <strong>Second Try:</strong> I tried changing environments and it did improve but it was more difficult for me to scan all around the face so the 3D scan still was missing some detail and one side of the face was brighter than the other due to the lighting.
+                </p>
+                <p>
+                    <strong>Final Try:</strong> I changed environment again where now the light is distributed evenly to all of the sides of Abraham's head. This worked very well and I'm very pleased to caputed this statues glory.
+                
                 </p>
                 
                 <img src="assets/3d-scan.jpg" alt="3D Scan Result" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
