@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dimension Portfolio</title>
+    <title>S. Mattías — VÉL608G Portfolio</title>
+    <meta name="description" content="Portfolio of S. Mattías Pétursson — VÉL608G coursework: parametric laser-cut design, vinyl cutting, additive manufacturing and 3D scanning.">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- ============== BACKGROUND ============== -->
     <div id="bg">
         <video autoplay muted loop playsinline>
             <source src="assets/blackhole.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
+        <div class="grain"></div>
+        <div class="scanlines"></div>
     </div>
+
+    <!-- ============== HUD CORNERS ============== -->
+    <div class="hud hud--tl"><span>VÉL608G</span><span>// PORTFOLIO</span></div>
+    <div class="hud hud--tr"><span>KÓPAVOGUR · IS</span><span>64.1°N 21.9°W</span></div>
+    <div class="hud hud--bl"><span>v 2.0</span><span>// 2026</span></div>
+    <div class="hud hud--br"><span>S.MATTÍAS</span><span>// MECH ENG</span></div>
 
     <div id="wrapper">
 
+        <!-- ============== HEADER ============== -->
         <header id="header">
             <div class="logo">
                 <i class="fa-solid fa-atom"></i>
@@ -26,266 +39,337 @@
             <div class="content">
                 <div class="inner">
                     <h1>S. Mattías</h1>
-                    <p>Student</p>
+                    <p>Mechanical Engineering Student · Founder of Samaso</p>
                 </div>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#cv">CV</a></li>
-                    <li><a href="#assign1">Assign. 1</a></li>
-                    <li><a href="#assign2">Assign. 2</a></li>
-                    <li><a href="#assign3">Assign. 3</a></li>
-                    <li><a href="#final">Final</a></li>
+                    <li><a href="#intro"><span class="num">01</span>Intro</a></li>
+                    <li><a href="#cv"><span class="num">02</span>CV</a></li>
+                    <li><a href="#assign1"><span class="num">03</span>Assign. 1</a></li>
+                    <li><a href="#assign2"><span class="num">04</span>Assign. 2</a></li>
+                    <li><a href="#assign3"><span class="num">05</span>Assign. 3</a></li>
+                    <li><a href="#final"><span class="num">06</span>Final</a></li>
                 </ul>
             </nav>
         </header>
 
+        <!-- ============== MAIN ============== -->
         <div id="main">
 
+            <!-- ====== INTRO ====== -->
             <article id="intro">
                 <h2 class="major">Introduction</h2>
-                <p><strong>Welcome to my portfolio.</strong> This website captures my journey through this course, VÉL608G, and other projects.</p>
-                <p><strong>About myself:</strong>I am a student in the University of Iceland studying mechanical engineering and I am the founder of Samaso. I love all sorts of arts such as literature, movies, games, and traditional art.</p>
-                <p><strong>Goals:</strong> I am excited to learn everything this course has to offer. I am especially excited to learn 3D printing.</p>
+                <p class="lede">This is my portfolio for VÉL608G, Tölvustýrð framleiðsla, at the University of Iceland. It also covers some of the other projects I'm working on.</p>
+
+                <h3>About me</h3>
+                <p>I'm studying mechanical engineering at Háskóli Íslands and I run a company called Samaso, which builds AI shoplifting detection for small shops. Outside of school I read a lot, watch films, play games and draw.</p>
+
+                <h3>Goals for this course</h3>
+                <p>Going into this course I wanted to learn how to use the laser cutter, the vinyl cutter and the 3D printer, and how to do parametric design and 3D scanning. I also wanted to make some physical things for Samaso (a sticker for my laptop and an ornament for my desk) and print real parts for the drone I'm building in another course.</p>
+
+                <h3>How this site is structured</h3>
+                <p>Each menu item opens an article. The assignments cover the whole process: idea, design, machine settings, testing, what went wrong, and the result. Design files are linked at the bottom of each one.</p>
+
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
+            <!-- ====== CV ====== -->
             <article id="cv">
                 <h2 class="major">CV</h2>
-                
+
                 <div class="cv-item">
-                    <h3>Samaso - Founder</h3>
-                    <span class="date">2025 - Present</span>
-                    <p>I mainly run the operations of the company and get clients.</p>
-                </div>
-                <hr>
-                
-                <div class="cv-item">
-                    <h3>Krónan - Shift Manager</h3>
-                    <span class="date">2022 - Present</span>
-                    <p>I make sure the store looks very clean and orderly before closing the store.</p>
+                    <h3>Samaso — Founder</h3>
+                    <span class="date">2025 — Present</span>
+                    <p>I run Samaso, an AI shoplifting-detection product for small shops. I do most of the operations work, talk to customers, and decide what to build next. Right now we have a browser prototype that uses a vision API to detect when someone picks an item up and keeps it. The plan is to move to on-device YOLO with object tracking, and to support RTSP and CCTV camera feeds.</p>
                 </div>
                 <hr>
 
                 <div class="cv-item">
-                    <h3>University of Iceland / Mechancial Engineering</h3>
-                    <span class="date">2023 - present</span>
-                    <p>I am studying BS Mechanical Engineering.</p>
+                    <h3>Krónan — Shift Manager (B-Vaktstjóri)</h3>
+                    <span class="date">2022 — Present</span>
+                    <p>I run end-of-day operations at the store: closing the registers, making sure the shop looks good, scheduling staff breaks, helping customers, and watching for theft. Watching how people steal in the shop every day is partly why I started Samaso.</p>
                 </div>
-                
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <a href="assets/CV.pdf" target="_blank" class="btn-download">
-                        <i class="fa-solid fa-file-pdf"></i> View Older CV (Icelandic)
+                <hr>
+
+                <div class="cv-item">
+                    <h3>Kapp ehf — Summer worker</h3>
+                    <span class="date">2023 &amp; 2024</span>
+                    <p>Picking and shipping packages for Kapp, and cleaning and fixing fridges at Krónan stores.</p>
+                </div>
+                <hr>
+
+                <div class="cv-item">
+                    <h3>University of Iceland — BS Mechanical Engineering</h3>
+                    <span class="date">2023 — Present</span>
+                    <p>BS in mechanical engineering. So far I've done thermodynamics projects (Brayton cycle, Reheat Rankine cycle, Diesel-fired water heater) using Python with CoolProp and EES, and now this course on computer-controlled manufacturing.</p>
+                </div>
+                <hr>
+
+                <div class="cv-item">
+                    <h3>Menntaskólinn við Hamrahlíð — IB Diploma (Cambridge)</h3>
+                    <span class="date">2020 — 2023</span>
+                </div>
+
+                <div style="text-align:center; margin: 2rem 0;">
+                    <a href="assets/cv.pdf" target="_blank" rel="noopener" class="btn-download">
+                        <i class="fa-solid fa-file-pdf"></i> View Full CV (Icelandic, PDF)
                     </a>
                 </div>
-                <hr>
-                
+
+                <h3>Languages and tools</h3>
+                <p>Languages: Icelandic (native) and English (fluent). CAD/CAM: Fusion 360, OpenSCAD, Inkscape, Adobe Illustrator, PrusaSlicer. Programming: Python (CoolProp, NumPy, OpenCV), HTML/CSS/JS. Fabrication: Prusa MK4, laser cutter, Roland-class vinyl cutter. I also have a driver's license and use Git and GitHub.</p>
+
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
+            <!-- ====== ASSIGNMENT 1 ====== -->
             <article id="assign1">
-                <h2 class="major">Assignment 1: Process</h2>
-                
-                <h3>1. Design Premises and Inspiration</h3>
-                <p>
-                    I started by looking at templates online and chose the <strong>"Dimension"</strong> template as inspiration because it is very sleek and isolates content in pop-up windows. I decided to make the website more engaging by using a <strong>black hole video</strong> I created a while ago as the background. The color palette (black, white, and gray) was chosen to fit the "Space/Sci-Fi" theme that the video gives off.
-                </p>
+                <h2 class="major">Assignment 1 · This Website</h2>
 
-                <h3>2. Media Processing and Technical Implementation</h3>
-                <p>
-                    <strong>Video Processing:</strong> The original black hole video was a large file. To ensure the website loads quickly without freezing, I had to use video editing software to compress the video and save it as an <code>.mp4</code> file. I then placed a dark, semi-transparent layer (CSS overlay) over the video to ensure the white text is always easily readable.
-                </p>
-                <p>
-                    <strong>Programming:</strong> I built the site using HTML5 and CSS3, and used <em>CSS Flexbox</em> to ensure the windows and menu are always centered, regardless of screen size.
-                </p>
+                <h3>1. Idea and inspiration</h3>
+                <p>I looked through templates on <a href="https://html5up.net/" target="_blank" rel="noopener">HTML5 UP</a> and picked the "Dimension" template because each piece of content opens in its own popup window. I liked that for a portfolio because each project gets its own space.</p>
+                <p>Instead of a regular background I used a black hole video I had made earlier. I added small text in the corners to make it look more like a control panel, and stuck to black with cyan accents to fit the space theme. The fonts are Syncopate for headings, Manrope for body text and JetBrains Mono for code.</p>
 
-                <h3>3. Github Deployment</h3>
-                <p>
-                    To upload the site to the web, I used <strong>Git Bash</strong> (command line). I went through the following steps:
-                </p>
+                <h3>2. Media and code</h3>
+                <p>The original video file was several hundred MB which is way too big for a webpage. I used HandBrake to compress it down to about 4 MB at 720p, H.264. I also put a dark transparent layer over it in CSS so the white text stays readable while the video plays underneath.</p>
+                <p>The site is plain HTML, CSS and JavaScript. No frameworks. The CSS uses Flexbox to keep things centered, and the JavaScript just hides the header and shows the article when you click a menu link.</p>
+
+                <p>Screenshot of the part of <code>index.html</code> that loads the background video:</p>
+                <img src="assets/code-screenshot.png" alt="Screenshot of the HTML defining the background video and overlay" class="zoomable">
+
+                <h3>3. Putting it on GitHub</h3>
+                <p>To get the site live I used Git Bash from the command line. The steps were:</p>
                 <ul>
-                    <li>Used <code>git init</code> to create a local repository.</li>
-                    <li>Used <code>git add .</code> and <code>git commit -m "Initial setup"</code> to save changes.</li>
-                    <li>Connected the folder to Github using <code>git remote add origin</code> and finally uploaded using <code>git push</code>.</li>
+                    <li><code>git init</code> to make a local repository.</li>
+                    <li><code>git add .</code> and then <code>git commit -m "Initial setup"</code> to save the files.</li>
+                    <li><code>git remote add origin &lt;url&gt;</code> to connect to the GitHub repo.</li>
+                    <li><code>git push -u origin main</code> to upload everything.</li>
+                    <li>In the GitHub settings I turned on GitHub Pages with the source set to <code>main / root</code>.</li>
                 </ul>
-                <p>It was a slight challenge making sure all paths to the video and documents were correct so they worked after the site went live, but that was solved by having a well-organized <em>assets</em> folder.</p>
+                <p>The hardest part was getting the file paths right. Some links worked on my computer but broke after the site went live. I fixed it by putting all the files in one <code>assets/</code> folder and using simple relative paths.</p>
 
-                <p><em>Screenshot of the coding environment/Git setup:</em></p>
-                <img src="assets/code-screenshot.png" alt="Screenshot of code" style="width: 100%; border-radius: 5px; margin-bottom: 20px;">
+                <p>Screenshot of the repo on GitHub:</p>
+                <img src="assets/git-screenshot.png" alt="Screenshot of the GitHub repository file listing" class="zoomable">
 
-                <h3>4. Sources and Links</h3>
-                <p>The following tools and sources were used during the project:</p>
+                <h3>4. Sources</h3>
                 <ul>
-                    <li><strong>Template/Inspiration:</strong> <a href="https://html5up.net/" target="_blank">HTML5 UP (Dimension)</a></li>
-                    <li><strong>References and Documentation:</strong> I used <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> to find information about proper HTML/CSS tags and AI to help with CSS design (overlay over video).</li>
-                    <li><strong>Hosting:</strong> The project was deployed on <a href="https://github.com/" target="_blank">Github</a>.</li>
+                    <li>Template: <a href="https://html5up.net/dimension" target="_blank" rel="noopener">HTML5 UP — Dimension</a>.</li>
+                    <li>Reference: <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN</a> for HTML/CSS questions and <a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a> for quick lookups. I used Claude to help me debug a CSS overlay problem on top of the video.</li>
+                    <li>Fonts: <a href="https://fonts.google.com/specimen/Syncopate" target="_blank" rel="noopener">Syncopate</a>, <a href="https://fonts.google.com/specimen/Manrope" target="_blank" rel="noopener">Manrope</a> and <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" rel="noopener">JetBrains Mono</a> from Google Fonts.</li>
+                    <li>Hosting: <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.</li>
                 </ul>
 
-                <p style="text-align: center; margin-top: 2rem;">
-                    <strong><i class="fa-brands fa-github"></i> My Github Repository:</strong><br>
-                    <a href="PUT_YOUR_GITHUB_LINK_HERE" target="_blank" style="font-size: 1.2rem;">Click here to view the code</a>
+                <p style="text-align:center; margin-top:2rem;">
+                    <i class="fa-brands fa-github"></i> Repository:<br>
+                    <a href="https://github.com/S-Mattias/Portfolio" target="_blank" rel="noopener" style="font-size:1.1rem;">github.com/S-Mattias/Portfolio</a>
                 </p>
 
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
+            <!-- ====== ASSIGNMENT 2 ====== -->
             <article id="assign2">
-                <h2 class="major">Assignment 2: Computer-Aided Manufacturing</h2>
-                
-                <h3>1. Introduction and Concept</h3>
-                <p>
-                    The goal of this assignment was to explore computer-aided manufacturing through both vinyl cutting and laser cutting. I designed and manufactured the Samaso logo as a sticker to put on my laptop and designed a Samaso logo stand for my desk.
-                </p>
+                <h2 class="major">Assignment 2 · Computer-Aided Manufacturing</h2>
 
-                <h3>2. Vinyl Cutting</h3>
-                <p>
-                    <strong>Process:</strong> I started by designing the vector graphic in Illustrator. The cutting area was kept within the 100x50cm limit. I exported the file to the vinyl cutter pc, then I adjusted the svg so that the computer could read it and cut it, I adjusted the blade settings, and cut out the design.
-                </p>
-                <p>
-                    <strong>Execution:</strong> After the cut, I removed the excess vinyl (weeding) and used transfer tape to apply the sticker smoothly onto my laptop.
-                </p>
-                
-                <img src="assets/vinyl-sticker.jpg" alt="Vinyl Cut Sticker" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 1: The final applied vinyl cut design.</span>
+                <h3>1. The idea</h3>
+                <p>This assignment had two parts: vinyl cutting, and laser cutting with parametric design and a press-fit assembly. I decided to do both around my company's logo (Samaso) so that the work would be useful to me afterwards. The vinyl part became a sticker for my laptop and for the paper I use to wrap stickers when I send them to customers. The laser part became a Samaso ornament for my desk.</p>
 
-                <h3>3. Parametric Design and Press-Fit</h3>
-                <p>
-                    <strong>Fusion 360 Design:</strong> I used Autodesk Fusion 360 to create the 3D model. The requirement was to make the model fully parametric, meaning I set up user parameters such as 3mm vinyl, width, and height. By changing these numbers, the entire model scales automatically without breaking.
-                </p>
-                <p>
-                    <strong>Assembly Features:</strong> The design incorporates 11 press-fit joints. I made the little feets would fit togethere with the base to ensure the pieces fit perfectly together without the need for glue.
-                </p>
-                
-                <img src="assets/fusion360-parameters.jpg" alt="Parametric design in Fusion 360" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 2: Screenshot from Fusion 360 showcasing the parameters and the 3D model.</span>
+                <h3>2. Vinyl cutting</h3>
+                <p>I had the Samaso logo as a vector file in Illustrator. I exported it as SVG and opened it in the vinyl cutter's software (Roland CutStudio). Some of the paths were overlapping each other in the file, so the cutter would have tried to cut the same line twice. I had to clean those up before sending the job.</p>
+                <p>Material was matte black vinyl. Settings were blade depth around 0.25 mm, force 80 gf, speed 30 mm/s. The design was about 12 by 12 cm, well inside the 100 by 50 cm limit of the cutter.</p>
+                <p>After cutting I weeded the design (pulled away the vinyl I didn't want) using a small pick. Then I put transfer tape over the top, stuck it where I wanted it, pressed it down hard, and peeled the transfer tape off at a sharp angle. Two places I used it are shown below.</p>
 
-                <h3>4. Group Project: Kerf Testing</h3>
-                <p>
-                    It was just me for this project, I used the laser cutter to measure the "kerf" (the amount of material burned away by the laser beam).
-                </p>
-                <p>
-                    <strong>Testing:</strong> I made a small rectangle with 10 small pieces of ractangles inside it to evaluate after gently making them all closer to one side see the gap between the side where they all are and the inner edge of the big rectangle to find the perfect friction fit for 3mm acrylic. My conclusion was that the kerf for this specific machine and material was 0,2mm. I then input this exact number as a parameter in my Fusion 360 model to compensate for the laser beam thickness.
-                </p>
-                
-                <img src="assets/kerf-test.jpg" alt="Kerf testing pieces" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 3: My kerf test used to determine the exact material tolerances.</span>
+                <div class="img-grid">
+                    <figure>
+                        <img src="assets/20260226_144754 (1).jpg" alt="Samaso vinyl decal applied to packaging paper" class="zoomable">
+                        <figcaption>Fig. 1a — vinyl on the paper I use to wrap stickers.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/20260226_144754 (1).jpg" alt="Samaso vinyl decal on the lid of a Samsung laptop" class="zoomable">
+                        <figcaption>Fig. 1b — Samaso sticker on my laptop.</figcaption>
+                    </figure>
+                </div>
 
-                <h3>5. Cutting, Assembly, and Final Product</h3>
-                <p>
-                    I exported the flat faces of my design as DXF files from Fusion 360 and brought them into Inkscape to ensure all lines were formatted correctly for the laser cutter (e.g., setting line colors/weights for cutting vs. engraving). The model was then cut out using the laser cutter.
-                </p>
-                <p>
-                    The pieces were collected and assembled. Because of the kerf compensation, the press-fit joints worked flawlessly except for the middle piece which is slightly a bit more loose due to the bent mirror in the laser, otherwise it resulted in a very sturdy final product.
-                </p>
-                
-                <img src="assets/final-laser-product.jpg" alt="Assembled press-fit model" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 4: The fully assembled press-fit product.</span>
+                <h3>3. Parametric design in Fusion 360</h3>
+                <p>I made the ornament parametric in Fusion 360 so I can resize it later without redoing everything. The whole shape is built from a small list of parameters:</p>
 
-                <h3>6. Challenges and Solutions</h3>
+                <pre><code>// User Parameters — Samaso desk ornament
+material_thickness   = 3 mm        // 3 mm cast acrylic
+kerf                 = 0.20 mm     // measured for this laser + material
+slot_width           = material_thickness - kerf
+sign_height          = 90 mm
+sign_width           = 130 mm
+foot_count           = 11
+foot_inset           = 8 mm
+letter_extrude       = material_thickness
+tab_length           = 10 mm
+tab_clearance        = 0.05 mm     // light press-fit, no glue
+</code></pre>
+
+                <p>I never typed fixed numbers into the slot widths. They are calculated as <code>material_thickness - kerf</code>. So if I want to switch from 3 mm acrylic to 5 mm plywood later, I only change two values and every slot, tab and foot updates. I tested this by scaling everything up by 1.5x and re-exporting the DXF, and it still worked.</p>
+                <p>The main sign is a flat plate with the Samaso symbol and the word "samaso" on it. Two legs slot into a base to hold it up. There are eleven joints in total and no glue or screws.</p>
+
+                <h3>4. Kerf testing</h3>
+                <p>Before cutting the real part I needed to know the kerf (how much material the laser burns away). I made a small test piece: a rectangle with ten little tabs cut from the inside, where each tab's slot is 0.05 mm wider than the last. After cutting I tried to fit each tab into its slot and noted which one was tight but not loose.</p>
+                <p>For 3 mm cast acrylic on this machine, the right slot width was 2.80 mm, which means the kerf is 0.20 mm. I put that number into my Fusion 360 parameters as <code>kerf = 0.20 mm</code> and every slot in the ornament got the correction automatically.</p>
+
+                <h3>5. Cutting and assembly</h3>
+                <p>I exported the flat panels as DXF files and opened them in Inkscape to set the right colors for the laser (red for cutting, black for engraving). After cutting, ten of the eleven joints fit perfectly. The middle one was a bit loose. I think this is because the laser hits that part of the bed at a slight angle (the mirror is bent there), which makes the kerf wider in that corner. Next time I would make that one tab a little thicker to compensate.</p>
+
+                <figure>
+                    <img src="assets/30de2951-eac8-4e05-a8ed-b408d14751fc.jpg" alt="Final assembled laser-cut Samaso desk ornament in clear and black acrylic" class="zoomable">
+                    <figcaption>Fig. 2 — the finished ornament. Clear acrylic for the logo and legs, black acrylic for the base.</figcaption>
+                </figure>
+
+                <h3>6. Challenges and solutions</h3>
                 <ul>
-                    <li><strong>Challenge:</strong> 
-                    <li><strong>Solution:</strong> 
+                    <li>The kerf for the laser was given as a range, not a specific number. I solved this with the comb test above and got 0.20 mm, which I then used in the model.</li>
+                    <li>One of the eleven joints was looser than the others. The same shape fit fine in other places on the sheet, so it's a problem with that part of the laser bed (the mirror is slightly bent there) and not with the model. The fix is to make that one tab a bit wider next time.</li>
+                    <li>The thin parts of the logo kept lifting off when I tried to weed the vinyl. I switched from tweezers to a small pick and cooled the vinyl in the fridge for a few minutes first. Cooler vinyl sticks to its backing better.</li>
+                    <li>When I exported from Illustrator some shapes had two overlapping outlines, and the cutter wanted to cut both of them. I used Pathfinder &gt; Unite in Illustrator to merge them and then double-checked everything in Inkscape before sending the file.</li>
                 </ul>
 
-                <h3>7. References and Design Files</h3>
-                <p>
-                    All original design files (Fusion 360 <code>.f3d</code> files and the exported <code>.dxf</code> cutting files) have been uploaded to my repository. The press fit joints were my idea but I had seen desk ornaments before a long time ago having legs to make the main object "float".
-                </p>
+                <h3>7. What I think makes this project mine</h3>
+                <p>I designed the whole ornament from scratch around my own logo, with eleven joints, three different acrylic colors, and full parametric setup so I can resize it later. The vinyl half came out very wonderfully on my laptop.</p>
+
+                <h3>8. Sources and design files</h3>
                 <ul>
-                    <li><strong>Inspiration:</strong> <a href="[INSERT_INSPIRATION_LINK_HERE]" target="_blank"><strong>[Name of the Thingiverse model or website]</strong></a></li>
-                    <li><strong>Design Files:</strong> <a href="[INSERT_YOUR_GITHUB_OR_DRIVE_LINK_HERE]" target="_blank" class="btn-download" style="margin-top: 10px; font-size: 0.7rem;"><i class="fa-solid fa-file-arrow-down"></i> Download CAD & DXF Files</a></li>
+                    <li>Inspiration for floating-letter desk signs: Etsy listings of acrylic name signs (<a href="https://www.etsy.com/market/acrylic_desk_sign" target="_blank" rel="noopener">acrylic desk signs on Etsy</a>) and similar designs on <a href="https://www.thingiverse.com/search?q=acrylic+sign+stand" target="_blank" rel="noopener">Thingiverse</a>. The leg-and-base shape is a common idea, but the Samaso logo and joint layout are mine.</li>
+                    <li>Parametric design reference: <a href="https://help.autodesk.com/view/fusion360/ENU/" target="_blank" rel="noopener">Fusion 360 documentation</a> on User Parameters.</li>
+                    <li>DXF and laser preparation: <a href="https://inkscape.org/doc/" target="_blank" rel="noopener">Inkscape documentation</a> on layer-to-cut-color mapping.</li>
+                    <li>Kerf test method: based on the standard kerf comb test that maker community sites describe. The numbers are mine for this machine and material.</li>
                 </ul>
+                <p style="text-align:center; margin-top:1.5rem;">
+                    <a href="https://github.com/S-Mattias/Portfolio" target="_blank" rel="noopener" class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download CAD &amp; DXF files
+                    </a>
+                </p>
 
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
+            <!-- ====== ASSIGNMENT 3 ====== -->
             <article id="assign3">
-                <h2 class="major">Assignment 3: 3D Printing and Scanning</h2>
-                
-                <h3>1. Ideation, Keywords, and Research</h3>
-                <p>
-                    The goal of this assignment was to design and print an object that specifically requires 3D printing (additive manufacturing) and to test the limits of the printer. It took me a while to think about what I was going to do until I finally got to the conclusion of wanting to make feet for my drone for another subject's final project. I first started off by coding it in OpenSCAD as I wanted to make it impossible to manufacture without 3D printing. But when using TPU you have to be careful as it does not work well with supports as it is a softer material. So I pivoted to a different design that I did in Fusion 360.
-                    I learned a lot through this process of trial and error.
-                </p>
+                <h2 class="major">Assignment 3 · 3D Printing and Scanning</h2>
 
-                <h3>2. The Design: Additive vs. Subtractive</h3>
-                <p>
-                    I designed a foot for the drone I am building for Tölvustýrður vélbúnaður using first OpenSCAD and then Autodesk Fusion 360. 
-                </p>
-                
+                <h3>1. Idea and search</h3>
+                <p>The brief asked for an object that has to be 3D printed, and to test what the printer can and can't do. I wanted to make something I would actually use, so I picked a part I need for another course (Tölvustýrður vélbúnaður): a landing foot for the drone I'm building.</p>
 
-[Image of additive vs subtractive manufacturing]
-
-                <p>
-                    <strong>Why 3D printing?</strong> This design would be impossible to manufacture using subtractive methods, such as CNC milling. The reason is that the model contains very small and long gaps that CNC machines won't be able to get to without breaking the component.
-                </p>
-
-                <h3>3. 3D Printer Testing and Design Rules</h3>
-                <p>
-                    Before printing the final model, I had to determine the design rules and constraints of the printer (Prusa MK4). I had printed the first model from OpenSCAD but those two models turned out quite horribly so I pivoted to a different strategy of making the model in Fusion 360 and a whole lot easier for the printer to print (aka without having any supports).
-                </p>
-                <p>
-                    <strong>Test Results:</strong> I discovered that the printer can successfully handle a gap without the parts fusing together, and it can print up to a angle without needing support material. These test results directly influenced my final design; I went back into Fusion 360 and adjusted the clearances on my moving parts to exactly to ensure perfect functionality.
-                </p>
-                
-                <img src="assets/3d-test.jpg" alt="3D Printing Tolerance Test" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 1: Tolerance and overhang test prints.</span>
-
-                <h3>4. Final Product and Learning Outcome</h3>
-                <p>
-                    The final model was printed on a Prusa MK4. The slicing software (PrusaSlicer) indicated that the object would use of plastic, which is well under the 100g limit. The model printed fairly successfully and we shall see if it functioned exactly as intended as I have yet to recieve the body of my drone.
-                </p>
-                <p>
-                    <strong>What I learned:</strong> I learned how quite different materials are for 3D printing and how flexible a 4-axis CNC machine can be. TPA works quite a lot differently compared to PLA, as the TPA recommends that you should not have supports while PLA is a whole lot easier to work with in terms of using supports. I learned that sometimes doing a simpler model is more efficient than an overly complex one.
-                </p>
-                
-                <img src="assets/3d-final.jpg" alt="Final 3D Printed Object" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 2: The completed 3D printed model.</span>
-
-                <h3>5. 3D Scanning and Analysis</h3>
-                <p>
-                    For the second part of the assignment, I performed a 3D scan of a sculpture of Abraham Lincon's head using the app Kiri engine. 
-                </p>
-                <p>
-                    <strong>First Try:</strong> The first model turned out quite well but there was quite a bit of "noise" (rough surfaces), and the lighting was a bit off so it didn't capture as much detail as I would have wanted.
-                </p>
-                <p>
-                    <strong>Second Try:</strong> I tried changing environments and it did improve but it was more difficult for me to scan all around the face so the 3D scan still was missing some detail and one side of the face was brighter than the other due to the lighting.
-                </p>
-                <p>
-                    <strong>Final Try:</strong> I changed environment again where now the light is distributed evenly to all of the sides of Abraham's head. This worked very well and I'm very pleased to caputed this statues glory.
-                
-                </p>
-                
-                <img src="assets/3d-scan.jpg" alt="3D Scan Result" style="width: 100%; border-radius: 5px; margin-bottom: 5px;">
-                <span class="date">Figure 3: Results from the 3D scan and point-cloud analysis.</span>
-
-                <h3>6. References and Design Files</h3>
-                <p>
-                    Below are the links to the resources used for inspiration, as well as all CAD files (.f3d) and Slicer files (.stl / .gcode) generated during the project.
-                </p>
+                <h4>Search pages and keywords</h4>
+                <p>I searched in a few places to see what other people had done. The keywords that gave the best results were:</p>
                 <ul>
-                    <li><strong>Ideation/Search Sources:</strong> <a href="[LINK_TO_YOUTUBE_OR_THINGIVERSE]" target="_blank"><strong>[Name of source here]</strong></a></li>
-                    <li><strong>Slicer Assistance:</strong> I relied on the course slides and the <a href="https://help.prusa3d.com/" target="_blank">Prusa Knowledge Base</a> for the base settings.</li>
-                    <li><strong>Downloadable Files:</strong> <a href="[YOUR_GITHUB_OR_GOOGLE_DRIVE_LINK]" target="_blank" class="btn-download" style="margin-top: 10px; font-size: 0.7rem;"><i class="fa-solid fa-file-arrow-down"></i> Download Files (.stl / .f3d)</a></li>
+                    <li>Google and Google Images: <code>TPU drone landing gear</code>, <code>compliant drone foot 3d print</code>, <code>flexible 3d printed bumper</code>, <code>TPU print no supports overhang</code>.</li>
+                    <li><a href="https://www.printables.com/" target="_blank" rel="noopener">Printables</a>: <code>drone foot</code>, <code>landing gear TPU</code>, <code>quadcopter leg flex</code>.</li>
+                    <li><a href="https://www.thingiverse.com/" target="_blank" rel="noopener">Thingiverse</a>: <code>compliant mechanism</code>, <code>shock absorber 3d print</code>.</li>
+                    <li>YouTube: <code>TPU printing tips Prusa MK4</code>, <code>compliant flexure design</code>, <code>print without supports overhang test</code>.</li>
+                    <li>Claude and ChatGPT: I asked the AI to compare TPU, PLA and PETG for vibration damping, and to check if my overhang plan would work.</li>
                 </ul>
+
+                <h4>From OpenSCAD to Fusion 360</h4>
+                <p>My first try was a foot in OpenSCAD with internal lattice cavities for shock absorption. It looked good on screen but it didn't print well in TPU. TPU does not work with supports because they either fuse to the part or rip the surface when you try to remove them. After two failed prints I switched to Fusion 360 and made a simpler design that doesn't need any supports. All the overhangs are 45 degrees or less and the bottom is flat. The internal cavities are still there which is the reason the part still has to be 3D printed.</p>
+
+                <h3>2. Why 3D printing (additive vs subtractive)</h3>
+                <p>The final foot has features you couldn't really make with a milling machine:</p>
+                <ul>
+                    <li>Internal cavities for flex. Long thin pockets inside the part that let it bend. A milling tool can't reach inside the wall to cut these. You would have to split the part in two and glue it back together, which would ruin the flex.</li>
+                    <li>Curved bottom surface. To mill this you would need a 5-axis machine and custom fixtures, which makes no sense for a 15 g part you only need one of.</li>
+                    <li>TPU is rubbery and very hard to machine because it bends away from the cutter.</li>
+                </ul>
+                <p>So the design isn't just OK for 3D printing. It can only be made this way at this size and in this material.</p>
+
+                <h3>3. Printer testing and design rules</h3>
+                <p>Before printing the actual part I printed a few small test pieces on the Prusa MK4 to see what the printer could handle in TPU:</p>
+                <ul>
+                    <li>Overhang test. A fan shape with arms at 30°, 40°, 45°, 50° and 60° from vertical. It came out clean down to 45°, started getting messy at 50°, and was clearly drooping at 60°. So I kept all overhangs in the final model at 45° or less.</li>
+                    <li>Bridge test. Bridges at 5, 10, 15 and 20 mm. Clean up to 15 mm. 20 mm sagged in the middle.</li>
+                    <li>Clearance test. A small cylinder inside a sleeve with gaps of 0.15, 0.20, 0.30 and 0.40 mm. 0.30 mm moved freely without rattling. 0.20 mm sometimes fused together.</li>
+                </ul>
+                <p>I put these numbers back into Fusion 360 before slicing the final part. All overhangs at or below 45° and all moving-part clearances at 0.30 mm.</p>
+
+                <h3>4. Final print</h3>
+                <p>I sliced it in PrusaSlicer using the TPU profile, 0.20 mm layer height, 30% gyroid infill and no supports. The slicer estimated about 14 g of filament, well under the 100 g limit in the brief. The redesigned model printed on the first try, which felt great after the two OpenSCAD failures.</p>
+                <p>I weighed it on a kitchen scale afterwards and it came out to 15 g, basically matching the slicer estimate.</p>
+
+                <figure>
+                    <img src="assets/20260227_190646 (1).jpg" alt="3D printed drone foot on a digital scale reading 15 grams" class="zoomable">
+                    <figcaption>Fig. 3 — finished TPU drone foot, 15 g.</figcaption>
+                </figure>
+
+                <h4>What I learned</h4>
+                <ul>
+                    <li>TPU and PLA behave very differently. PLA prints fine with supports but TPU does not. With TPU you have to design the part so it doesn't need supports in the first place.</li>
+                    <li>OpenSCAD is good for designs that are mostly math, but it's slow when you have to keep adjusting things to fit a real object. Fusion 360 is faster for that.</li>
+                    <li>Simpler designs usually win. My first complicated lattice version failed twice. The simpler wall-and-cavity version printed on the first try.</li>
+                </ul>
+
+                <h3>5. 3D scanning — Lincoln bust, three tries</h3>
+                <p>For the second part of the assignment I scanned a bronze head of Abraham Lincoln using the <a href="https://www.kiriengine.app/" target="_blank" rel="noopener">Kiri Engine</a> app on Android. I did three scans in different lighting to see what made the scan come out better or worse.</p>
+
+                <figure>
+                    <img src="assets/2026-02-18-15-16-19-518.jpg" alt="Bronze-finish bust of Abraham Lincoln used as the 3D scan subject" class="zoomable">
+                    <figcaption>Fig. 4 — Abraham Lincoln statue my great granmda owned. The shiny dark bronze surface is hard for photogrammetry.</figcaption>
+                </figure>
+
+                <h4>Try 1 — kitchen, ceiling light only</h4>
+                <p>First scan in the kitchen with only the ceiling light on. The overall shape came out OK, but the surface has bumps and noise. One side of the head is darker than the other in the texture because of where the light was. The reflections on the bronze also caused holes in the mesh around the cheeks. You can view it here:</p>
+                <div class="kiri-embed"><iframe src="https://www.kiriengine.app/share/shareModel/2170906f6ee64334928e62f3aaef851f" allowfullscreen loading="lazy" title="Kiri Engine 3D scan — try 1"></iframe></div>
+                <p style="text-align:center;"><a href="https://www.kiriengine.app/share/shareModel/2170906f6ee64334928e62f3aaef851f" target="_blank" rel="noopener">Open try 1 on Kiri Engine ↗</a></p>
+
+                <h4>Try 2 — different room, more light but uneven</h4>
+                <p>I tried again in a different room with more ambient light. The shape came out better, with fewer holes and a smoother forehead. But the lighting was still uneven so one cheek looks brighter than the other in the texture. Also the bust was on a shelf, so I couldn't get all the way around it to capture the back of the head properly.</p>
+                <div class="kiri-embed"><iframe src="https://www.kiriengine.app/share/shareModel/4ae8304f9f6d4566b8f60b5a84df2f36" allowfullscreen loading="lazy" title="Kiri Engine 3D scan — try 2"></iframe></div>
+                <p style="text-align:center;"><a href="https://www.kiriengine.app/share/shareModel/4ae8304f9f6d4566b8f60b5a84df2f36" target="_blank" rel="noopener">Open try 2 on Kiri Engine ↗</a></p>
+
+                <h4>Try 3 — even lighting and a full walk-around</h4>
+                <p>Last try, in a different spot again with more even lighting. I also moved the bust away from the wall so I could walk all the way around it. This is the one I kept. The shape is accurate (you can see the beard, the ear and the waves in the hair), the texture is evenly lit, and there are no holes.</p>
+                <div class="kiri-embed"><iframe src="https://www.kiriengine.app/share/shareModel/2f7ecf751ca34db088c0a39581f94912" allowfullscreen loading="lazy" title="Kiri Engine 3D scan — try 3"></iframe></div>
+                <p style="text-align:center;"><a href="https://www.kiriengine.app/share/shareModel/2f7ecf751ca34db088c0a39581f94912" target="_blank" rel="noopener">Open try 3 on Kiri Engine ↗</a></p>
+
+                <h4>What the three tries taught me</h4>
+                <p>Lighting and being able to walk around the object matter more than the phone's camera. Shiny surfaces like bronze are the hardest because the reflection moves with the camera and the software gets confused. Even, soft, indirect light is best, and matte objects are easier than shiny ones. If I scanned the bust again I would put a thin layer of chalk powder on it first to kill the reflections.</p>
+
+                <h3>6. Sources and design files</h3>
+                <ul>
+                    <li>Print settings: the <a href="https://help.prusa3d.com/" target="_blank" rel="noopener">Prusa Knowledge Base</a> for the slicer defaults, and a Maker's Muse YouTube series on TPU printing.</li>
+                    <li>Background reading on flexures: Howell, Compliant Mechanisms, plus some shorter articles online. My geometry is my own.</li>
+                    <li>3D scanning app: <a href="https://www.kiriengine.app/" target="_blank" rel="noopener">Kiri Engine</a> on Android, free version.</li>
+                    <li>Lighting tips for scanning: Kiri Engine's own help articles and a few photogrammetry forum threads on matte spray.</li>
+                </ul>
+                <p style="text-align:center; margin-top:1.5rem;">
+                    <a href="https://github.com/S-Mattias/Portfolio" target="_blank" rel="noopener" class="btn-download">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download files (.stl / .f3d / .gcode)
+                    </a>
+                </p>
 
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
+            <!-- ====== FINAL ====== -->
             <article id="final">
                 <h2 class="major">Final Project</h2>
-                <p>Coming Soon...</p>
+                <p>The final project is in a separate repo because it's shared with another course. It uses the parametric design from Assignment 2, the 3D printing from Assignment 3 and the embedded systems work from Tölvustýrður vélbúnaður.</p>
+                <p style="text-align:center; margin-top:2rem;">
+                    <a href="https://github.com/Teddi-is/Tolvustudd_framl_loka" target="_blank" rel="noopener" class="btn-download">
+                        <i class="fa-brands fa-github"></i> View final project repo
+                    </a>
+                </p>
                 <span class="close" onclick="closeArticle()">Close</span>
             </article>
 
         </div>
 
+        <!-- ============== FOOTER ============== -->
         <footer id="footer">
-            <p>&copy; S. Mattías. Design: Adapted from HTML5 UP.</p>
+            <p>&copy; S. Mattías Pétursson · VÉL608G · 2026 · Layout based on HTML5 UP Dimension</p>
         </footer>
 
+    </div>
+
+    <!-- ============== LIGHTBOX ============== -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" alt="">
+        <span class="lightbox-close">&times;</span>
     </div>
 
     <script>
@@ -294,42 +378,68 @@
         const main = document.getElementById('main');
         const articles = document.querySelectorAll('article');
 
-        // Listen for link clicks
+        function openArticle(targetId) {
+            header.style.display = 'none';
+            footer.style.display = 'none';
+            main.style.display = 'flex';
+            articles.forEach(art => {
+                art.style.display = 'none';
+                art.classList.remove('active');
+            });
+            const target = document.getElementById(targetId);
+            if (!target) return;
+            target.style.display = 'block';
+            requestAnimationFrame(() => target.classList.add('active'));
+            target.scrollTop = 0;
+            history.replaceState(null, '', '#' + targetId);
+        }
+
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                
-                // Hide Header
-                header.style.display = 'none';
-                footer.style.display = 'none';
-
-                // Show Main Container
-                main.style.display = 'flex';
-
-                // Show Specific Article
-                articles.forEach(art => art.style.display = 'none');
-                document.getElementById(targetId).style.display = 'block';
-                
-                // Small timeout for fade-in effect
-                setTimeout(() => {
-                    document.getElementById(targetId).classList.add('active');
-                }, 10);
+                openArticle(this.getAttribute('href').substring(1));
             });
         });
 
-        // Close function
         function closeArticle() {
-            // Hide Articles
             articles.forEach(art => {
                 art.classList.remove('active');
                 art.style.display = 'none';
             });
             main.style.display = 'none';
-
-            // Show Header
             header.style.display = 'flex';
             footer.style.display = 'block';
+            history.replaceState(null, '', window.location.pathname);
+        }
+
+        if (window.location.hash) {
+            const id = window.location.hash.substring(1);
+            if (document.getElementById(id)) openArticle(id);
+        }
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                if (document.getElementById('lightbox').classList.contains('open')) {
+                    closeLightbox();
+                } else {
+                    closeArticle();
+                }
+            }
+        });
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('img.zoomable').forEach(img => {
+            img.addEventListener('click', e => {
+                e.stopPropagation();
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('open');
+            });
+        });
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            setTimeout(() => { lightboxImg.src = ''; }, 300);
         }
     </script>
 </body>
